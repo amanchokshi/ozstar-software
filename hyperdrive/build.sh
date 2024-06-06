@@ -25,7 +25,7 @@ echo "Prefix:  ${PREFIX}"
 ml purge
 ml gcc/12.3.0 cuda/12.0.0 rust/1.70.0 cmake/3.26.3
 ml use /fred/oz048/achokshi/software/modulefiles
-ml cfitsio/3.49
+ml cfitsio/3.49.AC
 
 set -x
 
