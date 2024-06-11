@@ -22,8 +22,12 @@ echo "Version: ${VERSION}"
 echo "Prefix:  ${PREFIX}"
 
 # Build with a clean slate of modules.
-ml purge
-ml gcc/12.3.0 cuda/12.0.0 rust/1.70.0 cmake/3.26.3
+module purge
+module load gcc/12.3.0 
+module load cuda/12.0.0 
+module load rust/1.70.0 
+module load cmake/3.26.3
+
 ml use /fred/oz048/achokshi/software/modulefiles
 ml cfitsio/3.49.AC
 
