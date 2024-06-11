@@ -12,6 +12,8 @@ Too see available software:
 ```
 $ tree /fred/oz048/achokshi/software/modulefiles
 /fred/oz048/achokshi/software/modulefiles
+├── aoflagger
+│   └── 3.4.0.AC.lua
 ├── astropy-healpix
 │   └── 1.0.3.AC.lua
 ├── casacore
@@ -33,6 +35,8 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 │   └── master.lua
 ├── libconfig
 │   └── master.lua
+├── ssins
+│   └── 1.4.6.AC.lua
 └── wsclean
     ├── 3.3.AC.lua
     ├── 3.4.AC.lua
