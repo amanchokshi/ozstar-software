@@ -27,6 +27,9 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 │   ├── 0.5.8.AC.lua
 │   ├── 0.6.0.AC.lua
 │   └── master.lua
+├── hyperbeam
+│   ├── v0.6.0.AC.lua
+│   └── v0.8.0.AC.lua
 ├── hyperdrive
 │   ├── devel.lua
 │   └── v0.3.0.AC.lua
@@ -39,6 +42,8 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 │   └── 2.4.4.AC.lua
 ├── ssins
 │   └── 1.4.6.AC.lua
+├── woden
+│   └── v2.0.0.AC.lua
 └── wsclean
     ├── 3.3.AC.lua
     ├── 3.4.AC.lua
