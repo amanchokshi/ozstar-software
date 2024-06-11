@@ -35,6 +35,8 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 │   └── master.lua
 ├── libconfig
 │   └── master.lua
+├── pyuvdata
+│   └── 2.4.4.AC.lua
 ├── ssins
 │   └── 1.4.6.AC.lua
 └── wsclean
