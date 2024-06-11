@@ -30,6 +30,10 @@ if not ( isloaded("flexiblas/3.2.0") ) then
     load("flexiblas/3.2.0")
 end
 
+if not ( isloaded("python-scientific/3.10.4-foss-2022a") ) then
+    load("python-scientific/3.10.4-foss-2022a")
+end
+
 if not ( isloaded("fftw/3.3.10") ) then
     load("fftw/3.3.10")
 end
@@ -58,10 +62,6 @@ if not ( isloaded("hdf5/1.13.1") ) then
     load("hdf5/1.13.1")
 end
 
-if not ( isloaded("python/3.10.4") ) then
-    load("python/3.10.4")
-end
-
 if not ( isloaded("lua/5.4.4") ) then
     load("lua/5.4.4")
 end
@@ -82,9 +82,7 @@ prepend_path("CMAKE_LIBRARY_PATH", pathJoin(root, "lib64"))
 prepend_path("CMAKE_PREFIX_PATH", root)
 prepend_path("CPATH", pathJoin(root, "include"))
 prepend_path("LD_LIBRARY_PATH", pathJoin(root, "lib"))
+prepend_path("PYTHONPATH", pathJoin(root, "lib"))
 prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
-prepend_path("LIBRARY_PATH", pathJoin(root, "lib64"))
-prepend_path("PKG_CONFIG_PATH", pathJoin(root, "lib64/pkgconfig"))
-prepend_path("PKG_CONFIG_PATH", pathJoin(root, "share/pkgconfig"))
 prepend_path("XDG_DATA_DIRS", pathJoin(root, "share"))
 prepend_path("PATH", pathJoin(root, "bin"))
