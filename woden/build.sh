@@ -22,6 +22,7 @@ git checkout ${VERSION}
 module purge
 module load foss/2022a
 module load cmake/3.24.3
+module load cuda/12.0.0
 module load hdf5/1.12.2
 module load python-scientific/3.10.4-foss-2022a
 

@@ -30,6 +30,10 @@ local root = "/fred/oz048/achokshi/software/"..tool.."/"..version.."/"
 
 conflict("woden")
 
+if not ( isloaded("cuda/12.0.0") ) then
+    load("cuda/12.0.0")
+end
+
 if not ( isloaded("python-scientific/3.10.4-foss-2022a") ) then
     load("python-scientific/3.10.4-foss-2022a")
 end
