@@ -44,18 +44,6 @@ if not ( isloaded("scalapack/2.2.0-fb") ) then
     load("scalapack/2.2.0-fb")
 end
 
-if not ( isloaded("python/3.10.4") ) then
-    load("python/3.10.4")
-end
-
-if not ( isloaded("scipy-bundle/2022.05") ) then
-    load("scipy-bundle/2022.05")
-end
-
-if not ( isloaded("pyyaml/6.0") ) then
-    load("pyyaml/6.0")
-end
-
 prepend_path("CMAKE_PREFIX_PATH", root)
 prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
 prepend_path("PATH", pathJoin(root, "bin"))
