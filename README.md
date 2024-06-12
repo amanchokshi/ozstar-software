@@ -38,6 +38,10 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 │   └── master.lua
 ├── libconfig
 │   └── master.lua
+├── mwa_beams
+│   └── latest.lua
+├── oskar
+│   └── 2.9.5.AC.lua
 ├── pyuvdata
 │   └── 2.4.4.AC.lua
 ├── ssins
