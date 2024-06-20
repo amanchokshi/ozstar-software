@@ -22,15 +22,11 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 │   └── 3.49.AC.lua
 ├── cuffs
 │   └── master.lua
-├── ds9
-│   └── v8.5.AC.lua
 ├── everybeam
 │   ├── 0.4.0.AC.lua
 │   ├── 0.5.8.AC.lua
 │   ├── 0.6.0.AC.lua
 │   └── master.lua
-├── fv
-│   └── latest.lua
 ├── hyperbeam
 │   ├── v0.6.0.AC.lua
 │   └── v0.8.0.AC.lua
