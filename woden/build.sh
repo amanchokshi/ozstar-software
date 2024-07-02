@@ -3,7 +3,7 @@
 set -eu
 
 PACKAGE=woden
-# VERSION=v2.0.0
+# VERSION=v2.1.0
 VERSION=master
 REPO=https://github.com/JLBLine/WODEN.git
 ROOT=/fred/oz048/achokshi/software
@@ -17,7 +17,7 @@ echo "Prefix:  ${PREFIX}"
 # [ -r git-repo ] && rm -rf git-repo
 # git clone ${REPO} ${PREFIX}/git-repo
 cd "${PREFIX}/git-repo"
-# git checkout ${VERSION}
+git checkout master && git pull && git checkout ${VERSION}
 
 # Build with a clean slate of modules.
 module purge
@@ -43,8 +43,9 @@ cmake ${PREFIX}/git-repo -DCUDA_ARCH=8.0
 make -j12 verbose=1
 
 # Install python stuff
-python -m venv --system-site-packages .
-source bin/activate
+mkdir python && cd python
+python -m venv --system-site-packages woden-env
+source woden-env/bin/activate
 
 pip install -r ${PREFIX}/git-repo/requirements.txt
 pip install ${PREFIX}/git-repo

@@ -24,37 +24,38 @@ becoming less instrument-specific as time goes on. WODEN outputs uvfits files.
 whatis([==[Homepage: https://woden.readthedocs.io/]==])
 whatis([==[URL: https://woden.readthedocs.io/]==])
 
-local tool = 'woden'
-local version = 'v2.0.0'
-local root = "/fred/oz048/achokshi/software/"..tool.."/"..version.."/"
+local tool = "woden"
+local version = "v2.1.0"
+local root = "/fred/oz048/achokshi/software/" .. tool .. "/" .. version .. "/"
 
 conflict("woden")
 
-if not ( isloaded("cuda/12.0.0") ) then
-    load("cuda/12.0.0")
+if not (isloaded("cuda/12.0.0")) then
+	load("cuda/12.0.0")
 end
 
-if not ( isloaded("python-scientific/3.10.4-foss-2022a") ) then
-    load("python-scientific/3.10.4-foss-2022a")
+if not (isloaded("python-scientific/3.10.4-foss-2022a")) then
+	load("python-scientific/3.10.4-foss-2022a")
 end
 
-if not ( isloaded("flexiblas/3.2.0") ) then
-    load("flexiblas/3.2.0")
+if not (isloaded("flexiblas/3.2.0")) then
+	load("flexiblas/3.2.0")
 end
 
-if not ( isloaded("fftw/3.3.10") ) then
-    load("fftw/3.3.10")
+if not (isloaded("fftw/3.3.10")) then
+	load("fftw/3.3.10")
 end
 
-if not ( isloaded("fftw.mpi/3.3.10") ) then
-    load("fftw.mpi/3.3.10")
+if not (isloaded("fftw.mpi/3.3.10")) then
+	load("fftw.mpi/3.3.10")
 end
 
-if not ( isloaded("scalapack/2.2.0-fb") ) then
-    load("scalapack/2.2.0-fb")
+if not (isloaded("scalapack/2.2.0-fb")) then
+	load("scalapack/2.2.0-fb")
 end
 
 prepend_path("CMAKE_PREFIX_PATH", root)
 prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
 prepend_path("PATH", pathJoin(root, "bin"))
-prepend_path("PYTHONPATH", pathJoin(root, "lib/python3.10/site-packages"))
+prepend_path("PATH", pathJoin(root, "python/woden-env/bin"))
+prepend_path("PYTHONPATH", pathJoin(root, "python/woden-env/lib/python3.10/site-packages"))

@@ -57,4 +57,5 @@ end
 prepend_path("CMAKE_PREFIX_PATH", root)
 prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
 prepend_path("PATH", pathJoin(root, "bin"))
-prepend_path("PYTHONPATH", pathJoin(root, "lib/python3.10/site-packages"))
+prepend_path("PATH", pathJoin(root, "python/woden-env/bin"))
+prepend_path("PYTHONPATH", pathJoin(root, "python/woden-env/lib/python3.10/site-packages"))
