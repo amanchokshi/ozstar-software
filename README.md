@@ -22,14 +22,20 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 │   └── 3.49.AC.lua
 ├── cuffs
 │   └── master.lua
+├── ds9
+│   └── v8.5.AC.lua
 ├── everybeam
 │   ├── 0.4.0.AC.lua
 │   ├── 0.5.8.AC.lua
 │   ├── 0.6.0.AC.lua
 │   └── master.lua
+├── fv
+│   └── latest.lua
 ├── hyperbeam
 │   ├── v0.6.0.AC.lua
-│   └── v0.8.0.AC.lua
+│   ├── v0.8.0.AC.lua
+│   ├── v0.9.0.AC.lua
+│   └── v0.9.2.AC.lua
 ├── hyperdrive
 │   ├── devel.lua
 │   └── v0.3.0.AC.lua
@@ -47,6 +53,7 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 ├── ssins
 │   └── 1.4.6.AC.lua
 ├── woden
+│   ├── master.lua
 │   └── v2.0.0.AC.lua
 └── wsclean
     ├── 3.3.AC.lua
