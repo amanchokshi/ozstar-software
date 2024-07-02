@@ -20,6 +20,8 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 │   └── 3.5.0.AC.lua
 ├── cfitsio
 │   └── 3.49.AC.lua
+├── chips
+│   └── master.lua
 ├── cuffs
 │   └── master.lua
 ├── ds9
