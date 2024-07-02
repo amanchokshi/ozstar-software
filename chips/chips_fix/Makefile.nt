@@ -1,0 +1,45 @@
+# Makefile for CHIPS on Ngarrgu Tindebeek
+
+CODEHOME = ${CHIPS_DIR}/src
+CODEOUT = ${CHIPS_DIR}/bin
+
+CFLAGS=-g -Wall -D_FILE_OFFSET_BITS=64 -L. -lpthread
+CFLAGSOPT=-o3 -Wall -D_FILE_OFFSET_BITS=64 -L.
+INCS=-I${CODEHOME}/include
+
+# CFLAGS = -g -Wall -D_FILE_OFFSET_BITS=64 -I${CODEHOME}/include
+# CFLAGSOPT = -O3 -Wall -D_FILE_OFFSET_BITS=64 -I${CODEHOME}/include
+# LDFLAGS = -L. -lpthread
+# LIBS = -lm -fopenmp
+
+CFITSIO_INCS = -I${EBROOTCFITSIO}/include
+CFITSIO_LIBS = -L${EBROOTCFITSIO}/lib -lcfitsio
+
+BLAS_INCS = -I${EBROOTOPENBLAS}/include -I${EBROOTLAPACK}/include -I${EBROOTSCALAPACK}/include
+BLAS_LIBS = -L${EBROOTOPENBLAS}/lib -L${EBROOTLAPACK}/lib -L${EBROOTSCALAPACK}/lib -lscalapack -lopenblas
+
+TARGETS=$(CODEOUT)/grid_bn $(CODEOUT)/fft_thermal $(CODEOUT)/prepare_diff $(CODEOUT)/combine_data
+
+all: $(TARGETS)
+
+$(CODEOUT)/combine_data: combine_data.c uvfits.c primary_beamDIFF.c cspline.c libsla.a
+	ranlib libsla.a
+	cc $(CFLAGS) $(INCS) $(CFITSIO_INCS)  -o $@ combine_data.c uvfits.c primary_beamDIFF.c cspline.c $(CFITSIO_LIBS) -lfftw3 -lsla -lcfitsio   -lm -fopenmp
+
+$(CODEOUT)/fft_thermal: fft_krig.c uvfits.c primary_beamDEV.c cspline.c libsla.a
+	ranlib libsla.a
+	cc $(CFLAGS) $(INCS) $(CFITSIO_INCS) $(BLAS_INCS) -o $@ fft_krig.c uvfits.c primary_beamDEV.c cspline.c $(CFITSIO_LIBS) $(BLAS_LIBS) -lsla -lcfitsio -lm -fopenmp -llapack
+
+$(CODEOUT)/grid_bn: grid_visDIFFBNUV.c uvfits.c primary_beamBNanalytic.c cspline.c libsla.a
+	ranlib libsla.a
+	cc $(CFLAGS) $(INCS) $(CFITSIO_INCS)  -o $@ grid_visDIFFBNUV.c uvfits.c primary_beamBNanalytic.c cspline.c $(CFITSIO_LIBS) -lsla -lcfitsio  -lm -fopenmp
+
+$(CODEOUT)/prepare_diff: prepare_diff.c uvfits.c primary_beamDIFF.c cspline.c libsla.a
+	ranlib libsla.a
+	cc $(CFLAGS) $(INCS) $(CFITSIO_INCS)  -o $@ prepare_diff.c uvfits.c primary_beamDIFF.c cspline.c $(CFITSIO_LIBS) -lfftw3 -lsla -lcfitsio   -lm -fopenmp
+
+libsla.a:
+	cd SLALIB_C ; make
+	rm -f SLALIB_C/*.o
+
+$(shell mkdir -p $(CODEOUT))
