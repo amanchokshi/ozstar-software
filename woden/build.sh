@@ -3,7 +3,8 @@
 set -eu
 
 PACKAGE=woden
-VERSION=v2.0.0
+# VERSION=v2.0.0
+VERSION=master
 REPO=https://github.com/JLBLine/WODEN.git
 ROOT=/fred/oz048/achokshi/software
 
@@ -13,10 +14,10 @@ echo "Version: ${VERSION}"
 echo "Prefix:  ${PREFIX}"
 
 # Clone Repo
-[ -r git-repo ] && rm -rf git-repo
-git clone ${REPO} ${PREFIX}/git-repo
+# [ -r git-repo ] && rm -rf git-repo
+# git clone ${REPO} ${PREFIX}/git-repo
 cd "${PREFIX}/git-repo"
-git checkout ${VERSION}
+# git checkout ${VERSION}
 
 # Build with a clean slate of modules.
 module purge
@@ -27,7 +28,7 @@ module load hdf5/1.12.2
 module load python-scientific/3.10.4-foss-2022a
 
 module use /fred/oz048/achokshi/software/modulefiles
-module load hyperbeam/v0.6.0.AC
+module load hyperbeam/v0.9.2.AC
 
 set -x
 

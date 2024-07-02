@@ -1,4 +1,4 @@
-local tool = 'mwa_beams'
+local tool = "mwa_beams"
 help("MWA beam model files")
 whatis([[MWA beam model files]])
 
