@@ -29,6 +29,7 @@ module load python-scientific/3.10.4-foss-2022a
 
 module use /fred/oz048/achokshi/software/modulefiles
 module load hyperbeam/v0.9.2.AC
+module load pyuvdata/2.4.4.AC
 
 set -x
 
@@ -47,7 +48,13 @@ mkdir python && cd python
 python -m venv --system-site-packages woden-env
 source woden-env/bin/activate
 
-pip install -r ${PREFIX}/git-repo/requirements.txt
+pip install -U pip
+pip install sphinx_argparse \
+	sphinx-math-dollar \
+	python-casacore \
+	breathe \
+	palpy
+# pip install -r ${PREFIX}/git-repo/requirements.txt
 pip install ${PREFIX}/git-repo
 
 deactivate

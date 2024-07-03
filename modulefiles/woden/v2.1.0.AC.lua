@@ -54,6 +54,10 @@ if not (isloaded("scalapack/2.2.0-fb")) then
 	load("scalapack/2.2.0-fb")
 end
 
+if not (isloaded("pyuvdata/2.4.4.AC")) then
+	load("pyuvdata/2.4.4.AC")
+end
+
 prepend_path("CMAKE_PREFIX_PATH", root)
 prepend_path("LIBRARY_PATH", pathJoin(root, "lib"))
 prepend_path("PATH", pathJoin(root, "bin"))
