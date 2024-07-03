@@ -49,3 +49,4 @@ prepend_path("PYTHONPATH", pathJoin(root, "python/chips-env/lib/python3.10/site-
 
 setenv("CODEDIR", pathJoin(root, "bin"))
 setenv("BEAMDIR", "/fred/oz048/MWA/CODE/CHIPS/beam_files")
+setenv("TEMPLATE_CHIPS_OUT", "/fred/oz048/achokshi/software/chips/chips_fix/TEMPLATE_CHIPS_OUT")
