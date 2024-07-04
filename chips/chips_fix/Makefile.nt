@@ -4,13 +4,8 @@ CODEHOME = ${CHIPS_DIR}/src
 CODEOUT = ${CHIPS_DIR}/bin
 
 CFLAGS=-g -Wall -D_FILE_OFFSET_BITS=64 -L. -lpthread
-CFLAGSOPT=-o3 -Wall -D_FILE_OFFSET_BITS=64 -L.
+CFLAGSOPT=-O3 -Wall -D_FILE_OFFSET_BITS=64 -L.
 INCS=-I${CODEHOME}/include
-
-# CFLAGS = -g -Wall -D_FILE_OFFSET_BITS=64 -I${CODEHOME}/include
-# CFLAGSOPT = -O3 -Wall -D_FILE_OFFSET_BITS=64 -I${CODEHOME}/include
-# LDFLAGS = -L. -lpthread
-# LIBS = -lm -fopenmp
 
 CFITSIO_INCS = -I${EBROOTCFITSIO}/include
 CFITSIO_LIBS = -L${EBROOTCFITSIO}/lib -lcfitsio
