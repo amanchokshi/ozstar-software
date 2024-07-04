@@ -40,6 +40,7 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 │   └── v0.9.2.AC.lua
 ├── hyperdrive
 │   ├── devel.lua
+│   ├── peel.lua
 │   └── v0.3.0.AC.lua
 ├── idg
 │   ├── 1.2.0.AC.lua
