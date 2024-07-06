@@ -3,8 +3,8 @@
 set -eu
 
 PACKAGE=woden
-# VERSION=v2.1.0
-VERSION=master
+VERSION=v2.1.0
+# VERSION=master
 REPO=https://github.com/JLBLine/WODEN.git
 ROOT=/fred/oz048/achokshi/software
 
