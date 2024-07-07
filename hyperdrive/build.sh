@@ -28,9 +28,6 @@ module load cuda/12.0.0
 module load rust/1.70.0 
 module load cmake/3.26.3
 
-ml use /fred/oz048/achokshi/software/modulefiles
-ml cfitsio/3.49.AC
-
 set -x
 
 export HYPERDRIVE_CUDA_COMPUTE=80
@@ -38,4 +35,4 @@ export CARGO_HOME=${PREFIX}/${VERSION}
 
 [ -r "${PREFIX}/${VERSION}" ] && rm -rf "${PREFIX}/${VERSION}"
 mkdir -p "${PREFIX}/${VERSION}/bin"
-cargo install --path . --locked --features=hdf5-static,cuda 
+cargo install --path . --locked --features=cuda,all-static

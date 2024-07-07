@@ -1,8 +1,8 @@
 local tool = "hyperdrive"
-local version = "peel"
+local version = "v0.4.0"
 help("Sets up the paths you need to use " .. tool .. " version " .. version)
 whatis([[For further information see https://github.com/MWATelescope/mwa_hyperdrive]])
-load("cuda/12.0.0", "cfitsio/3.49.AC")
+load("cuda/12.0.0")
 
 if mode() ~= "whatis" then
 	local root = "/fred/oz048/achokshi/software/" .. tool .. "/" .. version .. "/"
