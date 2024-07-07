@@ -43,4 +43,4 @@ if not (isloaded("python/3.11.3")) then
 end
 
 prepend_path("PATH", pathJoin(root, "woden-0.2.1/python/woden-env/bin"))
-prepend_path("PYTHONPATH", pathJoin(root, "woden-0.2.1/python/woden-env/lib/python3.10/site-packages"))
+prepend_path("PYTHONPATH", pathJoin(root, "woden-0.2.1/python/woden-env/lib/python3.11/site-packages"))
