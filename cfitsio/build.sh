@@ -4,7 +4,8 @@ set -eu
 
 ROOT=/fred/oz048/achokshi/software
 PACKAGE=cfitsio          
-VERSION=3.49
+VERSION=4.3.0
+# VERSION=3.49
 
 PREFIX="${ROOT}/${PACKAGE}"
 cd "${PREFIX}"
