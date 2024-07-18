@@ -3,7 +3,7 @@
 set -eu
 
 PACKAGE=woden
-VERSION=v2.1.0
+VERSION=v2.2.0-alpha
 # VERSION=master
 REPO=https://github.com/JLBLine/WODEN.git
 ROOT=/fred/oz048/achokshi/software
@@ -40,7 +40,8 @@ set -x
 [ -r ${PREFIX}/${VERSION} ] && rm -rf ${PREFIX}/${VERSION}
 mkdir -p ${PREFIX}/${VERSION} && cd ${PREFIX}/${VERSION}
 
-cmake ${PREFIX}/git-repo -DCUDA_ARCH=8.0
+export CUDAARCHS=80
+cmake ${PREFIX}/git-repo
 make -j12 verbose=1
 
 # Install python stuff

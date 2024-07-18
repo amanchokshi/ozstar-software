@@ -53,13 +53,15 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 ├── oskar
 │   └── 2.9.5.AC.lua
 ├── pyuvdata
-│   └── 2.4.4.AC.lua
+│   ├── 2.4.4.AC.lua
+│   └── 3.0.0.AC.lua
 ├── ssins
 │   └── 1.4.6.AC.lua
 ├── woden
 │   ├── master.lua
 │   ├── v2.1.0.AC.lua
-│   └── v2.1.0.JL.lua
+│   ├── v2.1.0.JL.lua
+│   └── v2.2.0-alpha.AC.lua
 └── wsclean
     ├── 3.3.AC.lua
     ├── 3.4.AC.lua
