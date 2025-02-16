@@ -31,7 +31,8 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 │   ├── 0.4.0.AC.lua
 │   ├── 0.5.8.AC.lua
 │   ├── 0.6.0.AC.lua
-│   └── master.lua
+│   ├── master.lua
+│   └── mwa_python_wrapper.lua
 ├── fv
 │   └── latest.lua
 ├── hyperbeam
@@ -55,6 +56,8 @@ $ tree /fred/oz048/achokshi/software/modulefiles
 ├── pyuvdata
 │   ├── 2.4.4.AC.lua
 │   └── 3.0.0.AC.lua
+├── pyuvsim
+│   └── 1.4.0.AC.lua
 ├── ssins
 │   └── 1.4.6.AC.lua
 ├── woden
